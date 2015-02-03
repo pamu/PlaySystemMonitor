@@ -3,7 +3,11 @@
 # ~~~~
 
 GET     /                           controllers.Application.index()
-GET     /stats                      controllers.Application.stats()
+GET     /taskSummary                controllers.Application.taskSummary()
+GET     /cpu                        controllers.Application.cpu()
+GET     /mem                        controllers.Application.mem()
+GET     /processInfoCpuSorted       controllers.Application.processInfoCpuSorted()
+GET     /processInfoMemSorted       controllers.Application.processInfoMemSorted()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
