@@ -1,18 +1,529 @@
-2015-02-03 19:45:55,215 - [INFO] - from play in pool-8-thread-1 
+2015-02-03 21:34:18,091 - [INFO] - from play in pool-9-thread-5 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-02-03 19:46:14,066 - [INFO] - from play in play-internal-execution-context-1 
+2015-02-03 21:34:38,009 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-02-03 19:47:01,179 - [INFO] - from play in play-internal-execution-context-1 
+2015-02-03 21:35:09,279 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-02-03 19:47:01,655 - [INFO] - from play in play-internal-execution-context-1 
+2015-02-03 21:35:09,394 - [ERROR] - from application in play-akka.actor.default-dispatcher-7 
+
+
+! @6l49e6e6a - Internal server error, for (GET) [/] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: angulr.min.js could not be found. Make sure you've added the corresponding WebJar and please check for typos.]]
+	at play.api.Application$class.handleError(Application.scala:297) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.DefaultApplication.handleError(Application.scala:403) [play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:205) [play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:202) [play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4-RC2.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4-RC2.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4-RC2.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4-RC2.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:46) [play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4-RC2.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:73) [play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4-RC2.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.10-2.3.1.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.10-2.3.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4-RC2.jar:na]
+Caused by: java.lang.IllegalArgumentException: angulr.min.js could not be found. Make sure you've added the corresponding WebJar and please check for typos.
+	at org.webjars.WebJarAssetLocator.throwNotFoundException(WebJarAssetLocator.java:189) ~[webjars-locator-0.13.jar:na]
+	at org.webjars.WebJarAssetLocator.getFullPath(WebJarAssetLocator.java:230) ~[webjars-locator-0.13.jar:na]
+	at org.webjars.WebJarAssetLocator.getFullPath(WebJarAssetLocator.java:203) ~[webjars-locator-0.13.jar:na]
+	at controllers.WebJarAssets.locate(WebJarAssets.scala:49) ~[webjars-play_2.10-2.3-M1.jar:2.3-M1]
+	at views.html.main$.apply(main.template.scala:38) ~[classes/:na]
+	at views.html.index$.apply(index.template.scala:24) ~[classes/:na]
+	at controllers.Application$$anonfun$index$1.apply(Application.scala:10) ~[classes/:na]
+	at controllers.Application$$anonfun$index$1.apply(Application.scala:10) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$17.apply(Action.scala:390) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$17.apply(Action.scala:390) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:359) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:358) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:492) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:444) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:110) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:110) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:109) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:108) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:101) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4-RC2.jar:na]
+	... 6 common frames omitted
+
+2015-02-03 21:35:20,792 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-02-03 19:47:16,830 - [INFO] - from play in play-internal-execution-context-1 
+2015-02-03 21:35:21,185 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-02-03 19:47:17,230 - [INFO] - from play in play-internal-execution-context-1 
+2015-02-03 21:35:57,730 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:38:01,826 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:38:02,193 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:38:14,061 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:38:14,393 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:50:10,541 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:50:10,889 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:51:05,240 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:51:05,637 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:52:36,906 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:52:37,210 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:57:00,916 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 21:57:01,203 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:02:03,222 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:02:03,509 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:03:20,665 - [ERROR] - from application in New I/O worker #4 
+
+
+! @6l49hojhm - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$TemplateCompilationException: Compilation error[`)' expected but end of source found]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:57) ~[na:na]
+	at play.PlaySourceGenerators$$anonfun$3.apply(PlaySourceGenerators.scala:32) ~[na:na]
+	at scala.Function6$$anonfun$tupled$1.apply(Function6.scala:35) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.Function6$$anonfun$tupled$1.apply(Function6.scala:34) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.10.4-RC2.jar:na]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:42) ~[na:na]
+	at sbt.std.Transform$$anon$4.work(System.scala:64) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:18) ~[na:na]
+	at sbt.Execute.work(Execute.scala:244) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:160) ~[na:na]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:30) ~[na:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.7.0_76]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471) ~[na:1.7.0_76]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262) ~[na:1.7.0_76]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_76]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_76]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_76]
+
+2015-02-03 22:03:33,551 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:03:33,578 - [ERROR] - from application in play-akka.actor.default-dispatcher-62 
+
+
+! @6l49hpd62 - Internal server error, for (GET) [/] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: javascripts/app.js could not be found. Make sure you've added the corresponding WebJar and please check for typos.]]
+	at play.api.Application$class.handleError(Application.scala:297) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.DefaultApplication.handleError(Application.scala:403) [play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:205) [play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:202) [play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4-RC2.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4-RC2.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4-RC2.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4-RC2.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:46) [play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4-RC2.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:73) [play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4-RC2.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.10-2.3.1.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.10-2.3.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4-RC2.jar:na]
+Caused by: java.lang.IllegalArgumentException: javascripts/app.js could not be found. Make sure you've added the corresponding WebJar and please check for typos.
+	at org.webjars.WebJarAssetLocator.throwNotFoundException(WebJarAssetLocator.java:189) ~[webjars-locator-0.13.jar:na]
+	at org.webjars.WebJarAssetLocator.getFullPath(WebJarAssetLocator.java:230) ~[webjars-locator-0.13.jar:na]
+	at org.webjars.WebJarAssetLocator.getFullPath(WebJarAssetLocator.java:203) ~[webjars-locator-0.13.jar:na]
+	at controllers.WebJarAssets.locate(WebJarAssets.scala:49) ~[webjars-play_2.10-2.3-M1.jar:2.3-M1]
+	at views.html.main$.apply(main.template.scala:32) ~[classes/:na]
+	at views.html.index$.apply(index.template.scala:24) ~[classes/:na]
+	at controllers.Application$$anonfun$index$1.apply(Application.scala:10) ~[classes/:na]
+	at controllers.Application$$anonfun$index$1.apply(Application.scala:10) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$17.apply(Action.scala:390) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$17.apply(Action.scala:390) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:359) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:358) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:492) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:444) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:110) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:110) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:109) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:108) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:101) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4-RC2.jar:na]
+	... 6 common frames omitted
+
+2015-02-03 22:03:42,215 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:03:42,240 - [ERROR] - from application in play-akka.actor.default-dispatcher-59 
+
+
+! @6l49i0014 - Internal server error, for (GET) [/] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalArgumentException: app.js could not be found. Make sure you've added the corresponding WebJar and please check for typos.]]
+	at play.api.Application$class.handleError(Application.scala:297) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.DefaultApplication.handleError(Application.scala:403) [play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:205) [play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$13$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:202) [play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:33) [scala-library-2.10.4-RC2.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:185) [scala-library-2.10.4-RC2.jar:na]
+	at scala.util.Try$.apply(Try.scala:161) [scala-library-2.10.4-RC2.jar:na]
+	at scala.util.Failure.recover(Try.scala:185) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4-RC2.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$1.execute(Execution.scala:46) [play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:249) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.10.4-RC2.jar:na]
+	at play.api.libs.iteratee.Execution$$anon$2.execute(Execution.scala:73) [play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.10.4-RC2.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.10-2.3.1.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.10-2.3.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.10.4-RC2.jar:na]
+Caused by: java.lang.IllegalArgumentException: app.js could not be found. Make sure you've added the corresponding WebJar and please check for typos.
+	at org.webjars.WebJarAssetLocator.throwNotFoundException(WebJarAssetLocator.java:189) ~[webjars-locator-0.13.jar:na]
+	at org.webjars.WebJarAssetLocator.getFullPath(WebJarAssetLocator.java:230) ~[webjars-locator-0.13.jar:na]
+	at org.webjars.WebJarAssetLocator.getFullPath(WebJarAssetLocator.java:203) ~[webjars-locator-0.13.jar:na]
+	at controllers.WebJarAssets.locate(WebJarAssets.scala:49) ~[webjars-play_2.10-2.3-M1.jar:2.3-M1]
+	at views.html.main$.apply(main.template.scala:32) ~[classes/:na]
+	at views.html.index$.apply(index.template.scala:24) ~[classes/:na]
+	at controllers.Application$$anonfun$index$1.apply(Application.scala:10) ~[classes/:na]
+	at controllers.Application$$anonfun$index$1.apply(Application.scala:10) ~[classes/:na]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$17.apply(Action.scala:390) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$17.apply(Action.scala:390) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:359) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anonfun$apply$16.apply(Action.scala:358) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$.invokeBlock(Action.scala:492) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.ActionBuilder$$anon$1.apply(Action.scala:444) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:110) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:110) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:109) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:108) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:108) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:101) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:481) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:517) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$13.apply(Iteratee.scala:493) ~[play-iteratees_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.10.4-RC2.jar:na]
+	... 6 common frames omitted
+
+2015-02-03 22:05:18,157 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:05:18,480 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:05:53,191 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:06:15,836 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:06:16,110 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:07:42,182 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:07:42,481 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:08:17,173 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:08:17,459 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:09:13,419 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:09:13,695 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:11:59,955 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:12:00,312 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:14:24,820 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:14:25,106 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:15:00,280 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:15:39,301 - [ERROR] - from application in New I/O worker #14 
+
+
+! @6l49jekk8 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[type mismatch;
+ found   : play.api.templates.HtmlFormat.Appendable
+    (which expands to)  play.api.templates.Html
+ required: Int]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:290) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:285) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:285) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:318) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:318) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:318) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:107) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:105) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4-RC2.jar:na]
+
+2015-02-03 22:16:08,143 - [ERROR] - from application in New I/O worker #14 
+
+
+! @6l49jgbbi - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[type mismatch;
+ found   : play.api.templates.HtmlFormat.Appendable
+    (which expands to)  play.api.templates.Html
+ required: Int]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:290) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:285) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:285) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:318) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:318) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:318) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:107) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:105) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4-RC2.jar:na]
+
+2015-02-03 22:16:19,642 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:16:19,980 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:16:45,398 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:16:45,676 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:17:04,725 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:17:04,990 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:17:29,799 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:17:30,061 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:17:51,150 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:17:51,433 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:18:06,628 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:18:06,889 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:20:28,526 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:20:28,739 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:20:38,115 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:20:38,457 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:21:50,160 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6l49k9na5 - Internal server error, for (GET) [/webjars/js/app.js] ->
+
+play.PlayExceptions$CompilationException: Compilation error[too many arguments for method at: (file: String)play.api.mvc.Call]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:290) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:285) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:285) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:318) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:318) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:318) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:107) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:105) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4-RC2.jar:na]
+
+2015-02-03 22:22:11,361 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6l49kb2jg - Internal server error, for (GET) [/webjars/js/app.js] ->
+
+play.PlayExceptions$CompilationException: Compilation error[too many arguments for method at: (file: String)play.api.mvc.Call]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:290) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:285) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:285) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:318) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:318) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:318) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:107) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:105) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4-RC2.jar:na]
+
+2015-02-03 22:22:26,506 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:22:27,352 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:23:41,486 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:24:02,159 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-02-03 22:24:02,456 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 

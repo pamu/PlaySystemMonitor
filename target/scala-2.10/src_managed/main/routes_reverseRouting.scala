@@ -1,6 +1,6 @@
 // @SOURCE:/home/android/Documents/SbtWorkspace/PlaySystemMonitor/conf/routes
 // @HASH:fbb5fd022be04b838d49e1f3470670d0020b88d9
-// @DATE:Tue Feb 03 19:45:31 IST 2015
+// @DATE:Tue Feb 03 21:34:00 IST 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._

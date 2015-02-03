@@ -4,7 +4,7 @@
 		module="playsystemmonitor_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20150203194530"
+		publication="20150203213400"
 	>
 		<description>
 		PlaySystemMonitor

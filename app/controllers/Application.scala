@@ -7,7 +7,7 @@ import streams.AvailableStreams
 object Application extends Controller {
 
   def index = Action {
-    Ok(views.html.index("Server Sent Events"))
+    Ok(views.html.index("Play System Monitor"))
   }
 
   def taskSummary() = Action {

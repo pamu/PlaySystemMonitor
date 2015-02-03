@@ -22,8 +22,9 @@ object index extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,
 Seq[Any](format.raw/*1.17*/("""
 
 """),_display_(/*3.2*/main(title)/*3.13*/{_display_(Seq[Any](format.raw/*3.14*/("""
-    <div class="well">
+    <div class="well" ng-controller="AlertCtrl">
         <h1>"""),_display_(/*5.14*/title),format.raw/*5.19*/("""</h1>
+        """),format.raw/*6.9*/("""{"""),format.raw/*6.10*/("""{"""),format.raw/*6.11*/("""1 + 2"""),format.raw/*6.16*/("""}"""),format.raw/*6.17*/("""}"""),format.raw/*6.18*/("""
     </div>
 """)))}))}
     }
@@ -37,11 +38,11 @@ Seq[Any](format.raw/*1.17*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Feb 03 19:47:15 IST 2015
+                    DATE: Tue Feb 03 22:24:01 IST 2015
                     SOURCE: /home/android/Documents/SbtWorkspace/PlaySystemMonitor/app/views/index.scala.html
-                    HASH: 0106400778dfededbebf273a8923cd53aa14c137
-                    MATRIX: 556->1|665->16|693->19|712->30|750->31|813->68|838->73
-                    LINES: 19->1|22->1|24->3|24->3|24->3|26->5|26->5
+                    HASH: 7374cde3c6f4221fb95eaf2f015170adfa7a6763
+                    MATRIX: 556->1|665->16|693->19|712->30|750->31|839->94|864->99|904->113|932->114|960->115|992->120|1020->121|1048->122
+                    LINES: 19->1|22->1|24->3|24->3|24->3|26->5|26->5|27->6|27->6|27->6|27->6|27->6|27->6
                     -- GENERATED --
                 */
             
