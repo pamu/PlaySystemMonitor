@@ -13,7 +13,7 @@ import play.api.libs.functional.syntax._
 object AvailableStreams {
   import sys.process._
 
-  val iteratorMemSorted = s"top -c -d 10 -u ${System.getProperty("user.name")} -b -o %MEM".lines_!.iterator
+  val iteratorMemSorted = s"top -c -u ${System.getProperty("user.name")} -b -o %MEM".lines_!.iterator
 
   val statsMemSorted: Enumerator[String] = Enumerator.enumerate(iteratorMemSorted)
 
@@ -91,7 +91,7 @@ object AvailableStreams {
     case other => Input.Empty
   }
 
-  val iteratorCpuSorted = s"top -c -d 10 -u ${System.getProperty("user.name")} -b -o %CPU".lines_!.iterator
+  val iteratorCpuSorted = s"top -c -u ${System.getProperty("user.name")} -b -o %CPU".lines_!.iterator
 
   val statsCpuSorted: Enumerator[String] = Enumerator.enumerate(iteratorCpuSorted)
 

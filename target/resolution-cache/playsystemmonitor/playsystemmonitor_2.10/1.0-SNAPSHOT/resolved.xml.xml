@@ -4,7 +4,7 @@
 		module="playsystemmonitor_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20150203110040"
+		publication="20150203194530"
 	>
 		<description>
 		PlaySystemMonitor
@@ -39,6 +39,7 @@
 		<dependency org="com.typesafe.play" name="play-docs_2.10" rev="2.3-M1" conf="docs->default(compile)"/>
 		<dependency org="org.webjars" name="webjars-play_2.10" rev="2.3-M1" conf="compile->default(compile)"/>
 		<dependency org="org.webjars" name="bootstrap" rev="2.3.1" conf="compile->default(compile)"/>
+		<dependency org="org.webjars" name="angularjs" rev="1.3.10" conf="compile->default(compile)"/>
 		<dependency org="org.webjars" name="requirejs" rev="2.1.11-1" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

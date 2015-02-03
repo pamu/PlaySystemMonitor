@@ -7,10 +7,10 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150203110040"/>
+		date="20150203194530"/>
 	<dependencies>
 		<module organisation="org.webjars" name="requirejs">
-			<revision name="2.1.11-1" status="release" pubdate="20140228231616" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master, master(*), compile(*), runtime(*)" position="39">
+			<revision name="2.1.11-1" status="release" pubdate="20140228231616" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master, master(*), compile(*), runtime(*)" position="40">
 				<metadata-artifact status="no" details="" size="3347" time="0" location="/home/android/.ivy2/cache/org.webjars/requirejs/ivy-2.1.11-1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/requirejs/2.1.11-1/requirejs-2.1.11-1.pom"/>
 				<caller organisation="org.webjars" name="webjars-play_2.10" conf="default, compile, runtime, master" rev="2.1.10" rev-constraint-default="2.1.10" rev-constraint-dynamic="2.1.10" callerrev="2.3-M1"/>
 				<caller organisation="playsystemmonitor" name="playsystemmonitor_2.10" conf="compile" rev="2.1.11-1" rev-constraint-default="2.1.11-1" rev-constraint-dynamic="2.1.11-1" callerrev="1.0-SNAPSHOT"/>
@@ -24,6 +24,18 @@
 				<evicted-by rev="2.1.11-1"/>
 				<caller organisation="org.webjars" name="webjars-play_2.10" conf="default, compile, runtime, master" rev="2.1.10" rev-constraint-default="2.1.10" rev-constraint-dynamic="2.1.10" callerrev="2.3-M1"/>
 				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.webjars" name="angularjs">
+			<revision name="1.3.10" status="release" pubdate="20150121083815" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="39">
+				<license name="MIT License" url="https://github.com/angular/angular.js/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="31181" time="0" location="/home/android/.ivy2/cache/org.webjars/angularjs/ivy-1.3.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/angularjs/1.3.10/angularjs-1.3.10.pom"/>
+				<caller organisation="playsystemmonitor" name="playsystemmonitor_2.10" conf="compile" rev="1.3.10" rev-constraint-default="1.3.10" rev-constraint-dynamic="1.3.10" callerrev="1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="angularjs" type="jar" ext="jar" status="no" details="" size="3197164" time="0" location="/home/android/.ivy2/cache/org.webjars/angularjs/jars/angularjs-1.3.10.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/angularjs/1.3.10/angularjs-1.3.10.jar"/>
+					</artifact>
 				</artifacts>
 			</revision>
 		</module>

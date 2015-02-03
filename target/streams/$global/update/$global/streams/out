@@ -7,7 +7,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.scala-lang#scala-library;2.10.4-RC2 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.10.4-RC2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@61f53f75[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@741f396c[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.10.4-RC2[0m
 [0m[[0mdebug[0m] [0m	local: revision in cache: org.scala-lang#scala-library;2.10.4-RC2[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.10.4-RC2 in sbt-chain[0m
@@ -574,6 +574,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->default(compile)][0m
+[0m[[0minfo[0m] [0mResolving org.webjars#angularjs;1.3.10 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.webjars#angularjs;1.3.10 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.webjars#angularjs;1.3.10[0m
+[0m[[0mdebug[0m] [0m	local: revision in cache: org.webjars#angularjs;1.3.10[0m
+[0m[[0mdebug[0m] [0m	found org.webjars#angularjs;1.3.10 in sbt-chain[0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.webjars#requirejs;2.1.11-1 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.webjars#requirejs;2.1.11-1 {compile=[default(compile)]}[0m
@@ -910,6 +919,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->compile][0m
@@ -1238,6 +1251,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->compile][0m
@@ -2815,6 +2832,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->compile][0m
@@ -3145,6 +3166,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->compile][0m
@@ -3475,6 +3500,10 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.webjars#bootstrap;2.3.1->org.webjars#jquery;1.9.0 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#bootstrap;2.3.1 [compile->master][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#angularjs;1.3.10 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT->org.webjars#requirejs;2.1.11-1 [compile->compile][0m
@@ -4876,6 +4905,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play_2.10;2.3-M1!play_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.webjars#webjars-play_2.10;2.3-M1!webjars-play_2.10.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.webjars#bootstrap;2.3.1!bootstrap.jar[0m
+[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.webjars#angularjs;1.3.10!angularjs.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.webjars#requirejs;2.1.11-1!requirejs.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#build-link;2.3-M1!build-link.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.3-M1!play-exceptions.jar[0m
@@ -4980,7 +5010,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.10.4-RC2!scala-compiler.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4-RC2!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1317ms :: artifacts dl 49ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 4150ms :: artifacts dl 62ms[0m
 [0m[[0mdebug[0m] [0m	report for playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT compile produced in /home/android/Documents/SbtWorkspace/PlaySystemMonitor/target/resolution-cache/reports/playsystemmonitor-playsystemmonitor_2.10-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT runtime produced in /home/android/Documents/SbtWorkspace/PlaySystemMonitor/target/resolution-cache/reports/playsystemmonitor-playsystemmonitor_2.10-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT test produced in /home/android/Documents/SbtWorkspace/PlaySystemMonitor/target/resolution-cache/reports/playsystemmonitor-playsystemmonitor_2.10-test.xml[0m
@@ -4994,5 +5024,5 @@
 [0m[[0mdebug[0m] [0m	report for playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT docs produced in /home/android/Documents/SbtWorkspace/PlaySystemMonitor/target/resolution-cache/reports/playsystemmonitor-playsystemmonitor_2.10-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT pom produced in /home/android/Documents/SbtWorkspace/PlaySystemMonitor/target/resolution-cache/reports/playsystemmonitor-playsystemmonitor_2.10-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for playsystemmonitor#playsystemmonitor_2.10;1.0-SNAPSHOT scala-tool produced in /home/android/Documents/SbtWorkspace/PlaySystemMonitor/target/resolution-cache/reports/playsystemmonitor-playsystemmonitor_2.10-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (1317ms resolve - 49ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (4150ms resolve - 62ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

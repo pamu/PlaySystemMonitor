@@ -22,28 +22,29 @@ object main extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable,F
 Seq[Any](format.raw/*1.32*/("""
 
 <!DOCTYPE html>
+
 <html>
 <head>
-    <title>"""),_display_(/*6.13*/title),format.raw/*6.18*/("""</title>
-    <link rel='shortcut icon' type='image/png' href='"""),_display_(/*7.55*/routes/*7.61*/.Assets.at("images/favicon.png")),format.raw/*7.93*/("""'>
-    <link rel='stylesheet' href='"""),_display_(/*8.35*/routes/*8.41*/.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))),format.raw/*8.99*/("""'>
-    <script type='text/javascript' src='"""),_display_(/*9.42*/routes/*9.48*/.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))),format.raw/*9.102*/("""'></script>
+    <title>"""),_display_(/*7.13*/title),format.raw/*7.18*/("""</title>
+    <link rel='shortcut icon' type='image/png' href='"""),_display_(/*8.55*/routes/*8.61*/.Assets.at("images/favicon.png")),format.raw/*8.93*/("""'>
+    <link rel='stylesheet' href='"""),_display_(/*9.35*/routes/*9.41*/.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))),format.raw/*9.99*/("""'>
+    <script type='text/javascript' src='"""),_display_(/*10.42*/routes/*10.48*/.WebJarAssets.at(WebJarAssets.locate("angular.min.js"))),format.raw/*10.103*/("""'></script>
     <style>
-    body """),format.raw/*11.10*/("""{"""),format.raw/*11.11*/("""
+        body """),format.raw/*12.14*/("""{"""),format.raw/*12.15*/("""
         margin-top: 50px;
-    """),format.raw/*13.5*/("""}"""),format.raw/*13.6*/("""
+        """),format.raw/*14.9*/("""}"""),format.raw/*14.10*/("""
     </style>
 </head>
 <body>
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container-fluid">
-                <a id="titleLink" class="brand" href="/">"""),_display_(/*20.59*/title),format.raw/*20.64*/("""</a>
+                <a id="titleLink" class="brand" href="/">"""),_display_(/*21.59*/title),format.raw/*21.64*/("""</a>
             </div>
         </div>
     </div>
     <div class="container">
-        """),_display_(/*25.10*/content),format.raw/*25.17*/("""
+        """),_display_(/*26.10*/content),format.raw/*26.17*/("""
     </div>
 </body>
 </html>
@@ -59,11 +60,11 @@ Seq[Any](format.raw/*1.32*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Mon Feb 02 23:25:53 IST 2015
+                    DATE: Tue Feb 03 19:46:59 IST 2015
                     SOURCE: /home/android/Documents/SbtWorkspace/PlaySystemMonitor/app/views/main.scala.html
-                    HASH: b9738732d28330f7b420ee46ca87909a8809b05f
-                    MATRIX: 560->1|684->31|754->75|779->80|868->143|882->149|934->181|997->218|1011->224|1089->282|1159->326|1173->332|1248->386|1309->419|1338->420|1396->451|1424->452|1657->658|1683->663|1797->750|1825->757
-                    LINES: 19->1|22->1|27->6|27->6|28->7|28->7|28->7|29->8|29->8|29->8|30->9|30->9|30->9|32->11|32->11|34->13|34->13|41->20|41->20|46->25|46->25
+                    HASH: eccdefc0ad07d4de51ce066a15d2796b00d01db9
+                    MATRIX: 560->1|684->31|755->76|780->81|869->144|883->150|935->182|998->219|1012->225|1090->283|1161->327|1176->333|1253->388|1318->425|1347->426|1409->461|1438->462|1671->668|1697->673|1811->760|1839->767
+                    LINES: 19->1|22->1|28->7|28->7|29->8|29->8|29->8|30->9|30->9|30->9|31->10|31->10|31->10|33->12|33->12|35->14|35->14|42->21|42->21|47->26|47->26
                     -- GENERATED --
                 */
             
