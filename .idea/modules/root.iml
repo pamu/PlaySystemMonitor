@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../target/scala-2.10/resource_managed/main" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../target/scala-2.10/resource_managed/test" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../test/resources" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../target/native_libraries" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/resolution-cache" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/streams" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/web" />
@@ -112,8 +113,7 @@
     <orderEntry type="library" name="SBT: xerces:xercesImpl:2.11.0:jar" level="project" />
     <orderEntry type="library" name="SBT: xml-apis:xml-apis:1.4.01:jar" level="project" />
     <orderEntry type="library" name="SBT: org.webjars:bootstrap:2.3.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.webjars:jquery:1.9.0:jar" level="project" />
-    <orderEntry type="library" name="SBT: org.webjars:angularjs:1.3.10:jar" level="project" />
     <orderEntry type="library" name="SBT: org.webjars:requirejs:2.1.11-1:jar" level="project" />
+    <orderEntry type="library" name="SBT: org.webjars:jquery:2.1.3:jar" level="project" />
   </component>
 </module>

@@ -9,7 +9,7 @@
 		extra-scalaVersion="2.10"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150203194500"/>
+		date="20150204130537"/>
 	<dependencies>
 		<module organisation="com.typesafe.sbt" name="sbt-mocha">
 			<revision name="1.0.0-M2a" status="integration" pubdate="20140405005200" resolver="sbt-chain" artresolver="sbt-chain" extra-sbtVersion="0.13" extra-scalaVersion="2.10" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="102">

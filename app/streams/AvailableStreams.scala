@@ -73,7 +73,7 @@ object AvailableStreams {
     case Input.El(line) if line contains "KiB Mem:" => {
       val pieces = line.split("\\s+")
 
-      implicit def toFloat(str: String) = str.toFloat / (1024 * 1024)
+      implicit def toFloat(str: String) = str.toFloat
 
       Input.El(Json.toJson(Mem(pieces(2), pieces(4), pieces(6), pieces(8))))
     }

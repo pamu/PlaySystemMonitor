@@ -2,14 +2,25 @@
 
 <!DOCTYPE html>
 
-<html ng-app="monitor">
+<html>
 <head>
     <title>@title</title>
     <link rel='shortcut icon' type='image/png' href='@routes.Assets.at("images/favicon.png")'>
     <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.css"))'>
+    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+    <script type='text/javascript' src='@routes.Assets.at("js/Chart.js")'></script>
     <style>
         body {
-        margin-top: 50px;
+            margin-top: 50px;
+        }
+        .doughnut-legend li span {
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .doughnut-legend {
+            list-style: none;    
         }
     </style>
 </head>
@@ -25,8 +36,5 @@
     <div class="container">
         @content
     </div>
-
-    <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("angular.min.js"))'></script>
-    <script type='text/javascript' src='@routes.Assets.at("js/app.js")'></script>
 </body>
 </html>
