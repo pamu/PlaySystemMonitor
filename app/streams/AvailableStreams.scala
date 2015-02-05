@@ -13,12 +13,31 @@ import play.api.libs.functional.syntax._
 object AvailableStreams {
   import sys.process._
 
-  def iteratorMemSorted = s"top -c -u ${System.getProperty("user.name")} -b".lines_!.iterator
+  /**
+   * Get iterator executing the linux Top utility
+   * @return
+   */
+  def iterator = s"top -c -u ${System.getProperty("user.name")} -b".lines_!.iterator
 
-  def statsMemSorted: Enumerator[String] = Enumerator.enumerate(iteratorMemSorted)
+  /**
+   * Get enumerator from iterator
+   * @return
+   */
+  def statsMemSorted: Enumerator[String] = Enumerator.enumerate(iterator)
 
+  /**
+   * case class representing the Task Data
+   * @param total
+   * @param running
+   * @param sleeping
+   * @param stopped
+   * @param zombie
+   */
   case class TaskSummary(total: Int, running: Int, sleeping: Int, stopped: Int, zombie: Int)
 
+  /**
+   * Json write for TaskSummary
+   */
   implicit val taskSummaryWrites: Writes[TaskSummary] = (
       (JsPath \ "total").write[Int] and
       (JsPath \ "running").write[Int] and
@@ -27,6 +46,11 @@ object AvailableStreams {
       (JsPath \ "zombie").write[Int]
     )(unlift(TaskSummary.unapply))
 
+  /**
+   * Interested in only the lines which contains the key word Tasks,
+   * It is highly recommended to check the Linux utility Top
+   * @return
+   */
   def taskSummary: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
     case Input.El(line) if line contains "Tasks" => {
       val pieces = line.split("\\s+")
@@ -37,8 +61,22 @@ object AvailableStreams {
     case other => Input.Empty
   }
 
+  /**
+   * case class representing CPU data
+   * @param us
+   * @param sy
+   * @param ni
+   * @param id
+   * @param wa
+   * @param hi
+   * @param si
+   * @param st
+   */
   case class Cpu(us: Float, sy: Float, ni: Float, id: Float, wa: Float, hi: Float, si: Float, st: Float)
 
+  /**
+   * CPU data write
+   */
   implicit val cpuWrites: Writes[Cpu] = (
       (JsPath \ "us").write[Float] and
       (JsPath \ "sy").write[Float] and
@@ -50,6 +88,10 @@ object AvailableStreams {
       (JsPath \ "st").write[Float]
     )(unlift(Cpu.unapply))
 
+  /**
+   * Interested in lines with key work %Cpu, check top linux utility for output format
+   * @return
+   */
   def cpu: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
     case Input.El(line) if line contains "%Cpu(s)" => {
       val pieces = line.split("\\s+")
@@ -60,8 +102,16 @@ object AvailableStreams {
     case other => Input.Empty
   }
 
+  /**
+   * Mem case class representing MEM data
+   * @param total
+   * @param used
+   * @param free
+   * @param buffers
+   */
   case class Mem(total: Float, used: Float, free: Float, buffers: Float)
 
+  //Mem json write
   implicit val memWrites: Writes[Mem] = (
       (JsPath \ "total").write[Float] and
       (JsPath \ "used").write[Float] and
@@ -69,6 +119,10 @@ object AvailableStreams {
       (JsPath \ "buffers").write[Float]
     )(unlift(Mem.unapply))
 
+  /**
+   * Interested in line with keyword "KiB Mem:"
+   * @return
+   */
   def mem: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
     case Input.El(line) if line contains "KiB Mem:" => {
       val pieces = line.split("\\s+")
