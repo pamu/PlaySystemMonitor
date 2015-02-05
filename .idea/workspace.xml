@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75227ce3-327f-4015-b26b-d8bf813ab78b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/inputs" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-docs.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-sources.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-test.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/index.html" afterPath="$PROJECT_DIR$/tutorial/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/playsystemmonitor-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/playsystemmonitor-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/playsystemmonitor-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/playsystemmonitor-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/activator.properties" afterPath="$PROJECT_DIR$/activator.properties" />
     </list>
     <ignored path="PlaySystemMonitor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,11 +72,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AvailableStreams.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AvailableStreams.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/streams/AvailableStreams.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5472637" vertical-offset="0" max-vertical-offset="3058">
+            <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="3058">
               <caret line="19" column="84" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activator.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/activator.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.036484245" vertical-offset="0" max-vertical-offset="603">
+              <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -973,13 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/activator.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10945274" vertical-offset="0" max-vertical-offset="603">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07534247" vertical-offset="0" max-vertical-offset="584">
@@ -1042,8 +1023,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/streams/AvailableStreams.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5472637" vertical-offset="0" max-vertical-offset="3058">
+        <state vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="3058">
           <caret line="19" column="84" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/activator.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.036484245" vertical-offset="0" max-vertical-offset="603">
+          <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
           <folding />
         </state>
       </provider>
