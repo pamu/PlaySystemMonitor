@@ -1,6 +1,6 @@
 // @SOURCE:/home/android/Documents/SbtWorkspace/PlaySystemMonitor/conf/routes
-// @HASH:fbb5fd022be04b838d49e1f3470670d0020b88d9
-// @DATE:Tue Feb 03 21:34:00 IST 2015
+// @HASH:1d3364816ef66132d52ecf7ef338e90a8f897d13
+// @DATE:Thu Feb 05 11:57:55 IST 2015
 
 
 import play.core._
@@ -44,22 +44,14 @@ private[this] lazy val controllers_Application_cpu2 = Route("GET", PathPattern(L
 private[this] lazy val controllers_Application_mem3 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("mem"))))
         
 
-// @LINE:9
-private[this] lazy val controllers_Application_processInfoCpuSorted4 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("processInfoCpuSorted"))))
+// @LINE:11
+private[this] lazy val controllers_Assets_at4 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
         
 
-// @LINE:10
-private[this] lazy val controllers_Application_processInfoMemSorted5 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("processInfoMemSorted"))))
+// @LINE:12
+private[this] lazy val controllers_WebJarAssets_at5 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("webjars/"),DynamicPart("file", """.+""",false))))
         
-
-// @LINE:13
-private[this] lazy val controllers_Assets_at6 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
-        
-
-// @LINE:14
-private[this] lazy val controllers_WebJarAssets_at7 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("webjars/"),DynamicPart("file", """.+""",false))))
-        
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """taskSummary""","""controllers.Application.taskSummary()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cpu""","""controllers.Application.cpu()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mem""","""controllers.Application.mem()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """processInfoCpuSorted""","""controllers.Application.processInfoCpuSorted()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """processInfoMemSorted""","""controllers.Application.processInfoMemSorted()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """taskSummary""","""controllers.Application.taskSummary()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cpu""","""controllers.Application.cpu()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """mem""","""controllers.Application.mem()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """webjars/$file<.+>""","""controllers.WebJarAssets.at(file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -99,32 +91,16 @@ case controllers_Application_mem3(params) => {
 }
         
 
-// @LINE:9
-case controllers_Application_processInfoCpuSorted4(params) => {
-   call { 
-        invokeHandler(controllers.Application.processInfoCpuSorted(), HandlerDef(this, "", "controllers.Application", "processInfoCpuSorted", Nil,"GET", """""", Routes.prefix + """processInfoCpuSorted"""))
-   }
-}
-        
-
-// @LINE:10
-case controllers_Application_processInfoMemSorted5(params) => {
-   call { 
-        invokeHandler(controllers.Application.processInfoMemSorted(), HandlerDef(this, "", "controllers.Application", "processInfoMemSorted", Nil,"GET", """""", Routes.prefix + """processInfoMemSorted"""))
-   }
-}
-        
-
-// @LINE:13
-case controllers_Assets_at6(params) => {
+// @LINE:11
+case controllers_Assets_at4(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
    }
 }
         
 
-// @LINE:14
-case controllers_WebJarAssets_at7(params) => {
+// @LINE:12
+case controllers_WebJarAssets_at5(params) => {
    call(params.fromPath[String]("file", None)) { (file) =>
         invokeHandler(controllers.WebJarAssets.at(file), HandlerDef(this, "", "controllers.WebJarAssets", "at", Seq(classOf[String]),"GET", """""", Routes.prefix + """webjars/$file<.+>"""))
    }

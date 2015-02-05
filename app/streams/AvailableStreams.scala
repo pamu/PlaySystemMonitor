@@ -13,9 +13,9 @@ import play.api.libs.functional.syntax._
 object AvailableStreams {
   import sys.process._
 
-  val iteratorMemSorted = s"top -c -u ${System.getProperty("user.name")} -b -o %MEM".lines_!.iterator
+  def iteratorMemSorted = s"top -c -u ${System.getProperty("user.name")} -b -o %MEM".lines_!.iterator
 
-  val statsMemSorted: Enumerator[String] = Enumerator.enumerate(iteratorMemSorted)
+  def statsMemSorted: Enumerator[String] = Enumerator.enumerate(iteratorMemSorted)
 
   case class TaskSummary(total: Int, running: Int, sleeping: Int, stopped: Int, zombie: Int)
 
@@ -27,7 +27,7 @@ object AvailableStreams {
       (JsPath \ "zombie").write[Int]
     )(unlift(TaskSummary.unapply))
 
-  val taskSummary: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
+  def taskSummary: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
     case Input.El(line) if line contains "Tasks" => {
       val pieces = line.split("\\s+")
       implicit def toInt(str: String) = str.toInt
@@ -50,7 +50,7 @@ object AvailableStreams {
       (JsPath \ "st").write[Float]
     )(unlift(Cpu.unapply))
 
-  val cpu: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
+  def cpu: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
     case Input.El(line) if line contains "%Cpu(s)" => {
       val pieces = line.split("\\s+")
       implicit def toFloat(str: String) = str.toFloat
@@ -63,60 +63,19 @@ object AvailableStreams {
   case class Mem(total: Float, used: Float, free: Float, buffers: Float)
 
   implicit val memWrites: Writes[Mem] = (
-    (JsPath \ "total").write[Float] and
+      (JsPath \ "total").write[Float] and
       (JsPath \ "used").write[Float] and
       (JsPath \ "free").write[Float] and
       (JsPath \ "buffers").write[Float]
     )(unlift(Mem.unapply))
 
-  val mem: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
+  def mem: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
     case Input.El(line) if line contains "KiB Mem:" => {
       val pieces = line.split("\\s+")
 
       implicit def toFloat(str: String) = str.toFloat
 
       Input.El(Json.toJson(Mem(pieces(2), pieces(4), pieces(6), pieces(8))))
-    }
-    case Input.EOF => Input.EOF
-    case other => Input.Empty
-  }
-
-  val processInfoMemSorted: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
-    case Input.El(line) if line matches("\\s[0-9]+.*") => {
-      val pieces = line.split("\\s+").tail
-      Input.El(Json.toJson(ProcessInfo(pieces(0).toInt, pieces(2).toInt, pieces(3).toInt, pieces(4).toInt, pieces(5).toInt,
-        pieces(6).toInt, pieces(7), pieces(8).toFloat, pieces(9).toFloat, pieces(10), pieces(11))))
-    }
-    case Input.EOF => Input.EOF
-    case other => Input.Empty
-  }
-
-  val iteratorCpuSorted = s"top -c -u ${System.getProperty("user.name")} -b -o %CPU".lines_!.iterator
-
-  val statsCpuSorted: Enumerator[String] = Enumerator.enumerate(iteratorCpuSorted)
-
-  case class ProcessInfo(pid: Int, pr: Int, ni: Int, virt: Int, res: Int, shr: Int,
-                         s: String, cpu: Float, mem: Float, time: String, command: String)
-
-  implicit val processInfoWrites: Writes[ProcessInfo] = (
-      (JsPath \ "pid").write[Int] and
-      (JsPath \ "pr").write[Int] and
-      (JsPath \ "ni").write[Int] and
-      (JsPath \ "virt").write[Int] and
-      (JsPath \ "res").write[Int] and
-      (JsPath \ "shr").write[Int] and
-      (JsPath \ "s").write[String] and
-      (JsPath \ "cpu").write[Float] and
-      (JsPath \ "mem").write[Float] and
-      (JsPath \ "time").write[String] and
-      (JsPath \ "command").write[String]
-    )(unlift(ProcessInfo.unapply))
-
-  val processInfoCpuSorted: Enumerator[JsValue] = statsCpuSorted &> Enumeratee.mapInput[String] {
-    case Input.El(line) if line matches("\\s[0-9]+.*") => {
-      val pieces = line.split("\\s+").tail
-      Input.El(Json.toJson(ProcessInfo(pieces(0).toInt, pieces(2).toInt, pieces(3).toInt, pieces(4).toInt, pieces(5).toInt,
-      pieces(6).toInt, pieces(7), pieces(8).toFloat, pieces(9).toFloat, pieces(10), pieces(11))))
     }
     case Input.EOF => Input.EOF
     case other => Input.Empty

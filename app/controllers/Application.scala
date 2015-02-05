@@ -11,22 +11,14 @@ object Application extends Controller {
   }
 
   def taskSummary() = Action {
-    Ok.chunked(AvailableStreams.taskSummary)
+    Ok.chunked(AvailableStreams.taskSummary &> EventSource()).as(EVENT_STREAM)
   }
 
   def cpu() = Action {
-    Ok.chunked(AvailableStreams.cpu)
+    Ok.chunked(AvailableStreams.cpu &> EventSource()).as(EVENT_STREAM)
   }
 
   def mem() = Action {
     Ok.chunked(AvailableStreams.mem &> EventSource()).as(EVENT_STREAM)
-  }
-
-  def processInfoCpuSorted = Action {
-    Ok.chunked(AvailableStreams.processInfoCpuSorted)
-  }
-
-  def processInfoMemSorted = Action {
-    Ok.chunked(AvailableStreams.processInfoMemSorted)
   }
 }

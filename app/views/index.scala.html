@@ -1,13 +1,41 @@
 @(title: String)
 
 @main(title){
-	
-	<div>
-        <h2 class="alert alert-success" >RAM</h2>
+	<legend>
+        <div>
+            <h1 class="alert alert-block alert-info"><em>@{System.getProperty("user.name")}</em> System Monitor</h1>
+        </div>   
+    </legend>
+
+    <div class="progress progress-info">
+        <div class="bar" style="width: 100%"></div>
+    </div>
+
+    <div>
+        <h2 class="alert alert-success">Tasks</h2>
+    </div>
+
+
+
+    <div class="well" id="summary">
+            <span class="span1">Total:</span>
+            <span class="span1" id="total"></span>
+            <span class="span1">Running:</span>
+            <span class="span1" id="running"></span>
+            <span class="span1">Sleeping:</span>
+            <span class="span1" id="sleeping"></span>
+            <span class="span1">Stopped:</span>
+            <span class="span1" id="stopped"></span>
+            <span class="span1">Zombie:</span>
+            <span class="span1" id="zombie"></span>
     </div>
 
     <div class="progress progress-info">
         <div class="bar" style="width: 100%"></div>
+    </div>
+
+	<div>
+        <h2 class="alert alert-success">RAM</h2>
     </div>
 
     <div class="row-fluid">
@@ -21,8 +49,22 @@
         <div class="bar" style="width: 100%"></div>
     </div>
 
-    <script>
+    <div>
+        <h2 class="alert alert-success">CPU</h2>
+    </div>
 
+    <div class="row-fluid">
+        <div id="chartCpu" class="span6">
+            <canvas id="myChartCpu" width="400" height="400"></canvas>
+        </div>
+        <div id="legendCpu" class="span6"></div>
+    </div>
+
+    <div class="progress progress-info">
+        <div class="bar" style="width: 100%"></div>
+    </div>
+
+    <script type="text/javascript">
         Chart.defaults.global = {
             // Boolean - Whether to animate the chart
             animation: true,
@@ -193,7 +235,7 @@
                             animateScale : false,
 
                             //String - A legend template
-                            legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%> &nbsp; GB <span id=\"legend<%=i%>\"></span></li><%}%></ul>"
+                            legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%> &nbsp; <span id=\"legend<%=i%>\"></span></li><%}%></ul>"
                         }
 
         var myDoughnutChart = new Chart(ctx).Doughnut(data,options);
@@ -209,11 +251,146 @@
             myDoughnutChart.segments[0].value = Math.floor((mem.free * 100)/(mem.total));
             myDoughnutChart.segments[1].value = Math.floor((mem.used * 100)/(mem.total));
             myDoughnutChart.update();
-            $("#legend0").text(mem.free/(1024 * 1024));
-            $("#legend1").text(mem.used/(1024 * 1024));
+            $("#legend0").text((Math.floor((mem.free/(1024 * 1024)) * 100) / 100)+"GB");
+            $("#legend1").text((Math.floor((mem.used/(1024 * 1024)) * 100) / 100)+"GB");
          });
        } else {
          $("#chart").html("Sorry. This browser doesn't seem to support Server sent event. Check <a href='http://html5test.com/compare/feature/communication-eventSource.html'>html5test</a> for browser compatibility.");
+       }
+    </script>
+
+    <script type="text/javascript">
+        if (!!window.EventSource) {
+         var source = new EventSource("@routes.Application.taskSummary()");
+         source.addEventListener('message', function(e) {
+            var json = e.data;
+            var summary = JSON.parse(json);
+            $("#total").text(summary.total);
+            $('#running').text(summary.running);
+            $('#sleeping').text(summary.sleeping);
+            $('#stopped').text(summary.stopped);
+            $('#zombie').text(summary.zombie);
+         });
+       } else {
+         $("#summary").html("Sorry. This browser doesn't seem to support Server sent event. Check <a href='http://html5test.com/compare/feature/communication-eventSource.html'>html5test</a> for browser compatibility.");
+       }
+    </script>
+
+    <script>
+
+        var ctxCpu = $("#myChartCpu").get(0).getContext("2d");
+
+        var data = [
+                        {
+                            value: 10,
+                            color:"#ff1155",
+                            highlight: "#ff5555",
+                            label: "User time"
+                        },
+                        {
+                            value: 10,
+                            color: "#ff0000",
+                            highlight: "#ff9999",
+                            label: "System time"
+                        },
+                        {
+                            value: 10,
+                            color: "#FFFF00",
+                            highlight: "#FFFF66",
+                            label: "Nice time"
+                        },
+                        {
+                            value: 10,
+                            color: "#00ff00",
+                            highlight: "#44ff44",
+                            label: "Idle time"
+                        },
+                        {
+                            value: 10,
+                            color: "#3300FF",
+                            highlight: "#3366FF",
+                            label: "Wait cpu time"
+                        },
+                        {
+                            value: 10,
+                            color: "#660066",
+                            highlight: "#663366",
+                            label: "Hardware interrupt time"
+                        },
+                        {
+                            value: 10,
+                            color: "#FF0099",
+                            highlight: "#FF6699",
+                            label: "Software interrupt time"
+                        },
+                        {
+                            value: 10,
+                            color: "#000033",
+                            highlight: "#000099",
+                            label: "Steal time"
+                        }
+                    ]
+
+
+        var options = {
+                            //Boolean - Whether we should show a stroke on each segment
+                            segmentShowStroke : true,
+
+                            //String - The colour of each segment stroke
+                            segmentStrokeColor : "#fff",
+
+                            //Number - The width of each segment stroke
+                            segmentStrokeWidth : 2,
+
+                            //Number - The percentage of the chart that we cut out of the middle
+                            percentageInnerCutout : 50, // This is 0 for Pie charts
+
+                            //Number - Amount of animation steps
+                            animationSteps : 100,
+
+                            //String - Animation easing effect
+                            animationEasing : "easeOutBounce",
+
+                            //Boolean - Whether we animate the rotation of the Doughnut
+                            animateRotate : true,
+
+                            //Boolean - Whether we animate scaling the Doughnut from the centre
+                            animateScale : false,
+
+                            //String - A legend template
+                            legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%> &nbsp;<span id=\"legendCpu<%=i%>\"></span></li><%}%></ul>"
+                        }
+
+        var myDoughnutChartCpu = new Chart(ctxCpu).Doughnut(data,options);
+
+        var legend = myDoughnutChartCpu.generateLegend();
+        $("#legendCpu").html(legend);
+
+        if (!!window.EventSource) {
+         var source = new EventSource("@routes.Application.cpu()");
+         source.addEventListener('message', function(e) {
+            var json = e.data;
+            var cpu = JSON.parse(json);
+            myDoughnutChartCpu.segments[0].value = Math.floor(cpu.us);
+            myDoughnutChartCpu.segments[1].value = Math.floor(cpu.sy);
+            myDoughnutChartCpu.segments[2].value = Math.floor(cpu.ni);
+            myDoughnutChartCpu.segments[3].value = Math.floor(cpu.id);
+            myDoughnutChartCpu.segments[4].value = Math.floor(cpu.wa);
+            myDoughnutChartCpu.segments[5].value = Math.floor(cpu.hi);
+            myDoughnutChartCpu.segments[6].value = Math.floor(cpu.si);
+            myDoughnutChartCpu.segments[7].value = Math.floor(cpu.st);
+            myDoughnutChartCpu.update();
+            $("#legendCpu0").text(Math.floor(cpu.us * 100)/100+"%");
+            $("#legendCpu1").text(Math.floor(cpu.sy * 100)/100+"%");
+            $("#legendCpu2").text(Math.floor(cpu.ni * 100)/100+"%");
+            $("#legendCpu3").text(Math.floor(cpu.id * 100)/100+"%");
+            $("#legendCpu4").text(Math.floor(cpu.wa * 100)/100+"%");
+            $("#legendCpu5").text(Math.floor(cpu.hi * 100)/100+"%");
+            $("#legendCpu6").text(Math.floor(cpu.si * 100)/100+"%");
+            $("#legendCpu7").text(Math.floor(cpu.st * 100)/100+"%");
+         });
+       } else {
+         $("#myChartCpu").html("Sorry. This browser doesn't seem to support Server sent event. Check <a href='http://html5test.com/compare/feature/communication-eventSource.html'>html5test</a> for browser compatibility.");
        }
     </script>
 }

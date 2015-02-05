@@ -4,7 +4,7 @@
 		module="playsystemmonitor$sources_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20150204123713"
+		publication="20150205115459"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>

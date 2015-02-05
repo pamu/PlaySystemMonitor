@@ -4,7 +4,7 @@
 		module="playsystemmonitor$sbt_2.10"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20150204123710"
+		publication="20150205115457"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>

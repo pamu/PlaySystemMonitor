@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="default"
 		confs="default"
-		date="20150204123710"/>
+		date="20150205115457"/>
 	<dependencies>
 		<module organisation="com.typesafe.sbt" name="sbt-mocha">
 			<revision name="1.0.0-M2a" status="integration" pubdate="20140405005200" resolver="sbt-chain" artresolver="sbt-chain" extra-sbtVersion="0.13" extra-scalaVersion="2.10" downloaded="false" searched="false" default="false" conf="default(compile), compile" position="150">

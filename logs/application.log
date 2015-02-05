@@ -1,69 +1,45 @@
-2015-02-04 13:55:37,300 - [INFO] - from play in pool-4-thread-1 
+2015-02-05 11:57:09,533 - [INFO] - from play in pool-4-thread-5 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-02-04 13:56:53,956 - [INFO] - from play in play-internal-execution-context-1 
+2015-02-05 11:57:28,752 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6l4l4e297 - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[value processInfoCpuSorted is not a member of object controllers.Application]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:290) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:285) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:285) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:318) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:318) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.10.4-RC2.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:318) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:107) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:105) ~[play_2.10-2.3-M1.jar:2.3-M1]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.10.4-RC2.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.10.4-RC2.jar:na]
+
+2015-02-05 11:57:28,885 - [WARN] - from play in New I/O worker #1 
+No application found at invoker init
+
+2015-02-05 11:58:06,369 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-02-04 13:57:00,369 - [INFO] - from play in play-internal-execution-context-1 
+2015-02-05 11:58:06,857 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-02-04 13:59:24,650 - [INFO] - from play in play-internal-execution-context-1 
+2015-02-05 11:58:24,234 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2015-02-04 13:59:25,136 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-02-04 14:02:35,219 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-02-04 14:02:35,743 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-02-04 14:03:44,579 - [INFO] - from play in play-internal-execution-context-4 
-Application started (Dev)
-
-2015-02-04 14:03:45,097 - [INFO] - from play in play-internal-execution-context-4 
-Application started (Dev)
-
-2015-02-04 14:04:30,426 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-02-04 14:04:30,924 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-02-04 14:05:25,235 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-02-04 14:05:25,643 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-02-04 14:06:39,335 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-02-04 14:06:39,775 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-02-04 14:07:59,902 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-02-04 14:08:00,485 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-02-04 14:11:49,139 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-02-04 14:11:49,560 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-02-04 14:13:13,026 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-02-04 14:13:13,473 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-02-04 14:15:29,200 - [INFO] - from play in play-internal-execution-context-5 
-Application started (Dev)
-
-2015-02-04 14:15:29,586 - [INFO] - from play in play-internal-execution-context-5 
+2015-02-05 11:58:24,627 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
