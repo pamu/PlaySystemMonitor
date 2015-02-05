@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75227ce3-327f-4015-b26b-d8bf813ab78b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/inputs" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/output" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/activator.properties" afterPath="$PROJECT_DIR$/activator.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-docs.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-docs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-sources.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-sources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-test.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/reports/default-playsystemmonitor-build-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/compile/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/playsystemmonitor-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/playsystemmonitor-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/resolution-cache/default/playsystemmonitor-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/resolution-cache/default/playsystemmonitor-build/scala_2.10/sbt_0.13/0.1-SNAPSHOT/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/root.iml" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tutorial/index.html" afterPath="$PROJECT_DIR$/tutorial/index.html" />
     </list>
     <ignored path="PlaySystemMonitor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -128,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activator.properties" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activator.properties" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/activator.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="308">
-              <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.10945274" vertical-offset="0" max-vertical-offset="603">
+              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -148,11 +126,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tutorial/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7692308" vertical-offset="0" max-vertical-offset="1738">
-              <caret line="20" column="94" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
+            <state vertical-scroll-proportion="-14.193548" vertical-offset="0" max-vertical-offset="1738">
+              <caret line="20" column="93" selection-start-line="20" selection-start-column="93" selection-end-line="20" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -175,8 +153,8 @@
         <option value="$PROJECT_DIR$/app/views/index.scala.html" />
         <option value="$PROJECT_DIR$/app/controllers/Application.scala" />
         <option value="$PROJECT_DIR$/app/streams/AvailableStreams.scala" />
-        <option value="$PROJECT_DIR$/activator.properties" />
         <option value="$PROJECT_DIR$/tutorial/index.html" />
+        <option value="$PROJECT_DIR$/activator.properties" />
       </list>
     </option>
   </component>
@@ -1018,14 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/activator.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
-          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.375" vertical-offset="0" max-vertical-offset="176">
@@ -1079,8 +1049,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tutorial/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7692308" vertical-offset="0" max-vertical-offset="1738">
-          <caret line="20" column="94" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
+        <state vertical-scroll-proportion="-14.193548" vertical-offset="0" max-vertical-offset="1738">
+          <caret line="20" column="93" selection-start-line="20" selection-start-column="93" selection-end-line="20" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/activator.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10945274" vertical-offset="0" max-vertical-offset="603">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
           <folding />
         </state>
       </provider>
