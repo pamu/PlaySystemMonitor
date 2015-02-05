@@ -13,62 +13,65 @@
                 and showing data in terms of Charts is very important for easy comprehension.
             </p>
             <p>
-                <p>
-                    The <code>Top</code> command data is exposed to javascript client
-                    and chart js is used to present the data in terms of charts
-                </p>
-                
-                <code>AvailableStreams.taskSummary</code> adapted to <code>EventSource</code>
-                the java script code at <a href="#code/views/index.scala.html">index.scala.html</a> contains
-                the <code>@routes.Application.taskSummary()</code> which points to the taskSummary action in the application controllerms of Doughnut Pie
-                charts in this application.
+                <div>
+                    <h2>What this app does ?</h2>
+                    <p>
+                        Play system monitor uses <code>top</code> command line utility of linux/unix to
+                        send the system memory and CPU usage statistics to the web UI using event source.
+                        <code>top -b</code> produces system memory, cpu usage data continuosly. <code>top -b</code> -b means top runs in batch mode and sends the data that can be captured and used by other programs.
+                    </p>
+                </div>
+                <div>
+                    <h2>Top Linux Utility</h2>
+                    <p>
+                        Please check top command to know more about it or do <code>man top</code> to read the man page of the top command.
+                        Now process API of scala helps to execute the system commands from the Scala code and the output stream of the data produces by the system command can be captured.
+                        Here is the code snippet which helps us to understand executing system command from scala
+                        <code>
+                            import sys.process._
+                            "cat somefile.txt".!!
+                        </code>
+                        The above code executes the cat command and prints the output to the scala console
+                        Note that the <code>top -b</code> continuously produces the data so we capture that stream of data in the iterator rather than consuming it at once. So, we request the iterator while executing the linux command.
+                        <code>
+                            import sys.process._
+                            "top -b".lines_!.iterator
+                        </code>
+
+                    </p>
+                </div>
+                <div>
+                    <h2>Enumerator as Producer</h2>
+                    <p>
+                        
+                    </p>
+                </div>
+
+                <div>
+                    <h2>Enumeratee for Transforming the Stream</h2>
+                    <p>
+                    </p>
+                </div>
+                <div>
+                    <h2>Writing consumption end point</h2>
+                    <p>
+
+                    </p>
+                </div>
+                <div>
+                    <h2>Event Source Javascript</h2>
+                    <p>
+                        
+                    </p>
+                </div>
+                <div>
+                    <h2>Chart js</h2>
+                    <p>
+
+                    </p>
+                </div>
             </p>
         </div>
-        <div>
-            <h2>Event Source</h2>
-            <p>
-                <a href="#code/controllers/Application.scala" class="shortcut">
-                    Application.scala
-                </a> contains actions of different event streams and the below is the tasks event stream
-            </p>
-            <code>
-                def taskSummary() = Action {
-                    Ok.chunked(AvailableStreams.taskSummary &> EventSource()).as(EVENT_STREAM)
-                }
-            </code>
-            <p>
-                take <code>AvailableStreams.taskSummary</code> pass it to <code>EventSource</code> to adapt it into event source
-                the java script code at <a href="#code/views/index.scala.html" class="shortcut">index.scala.html</a> contains
-                the <code>@routes.Application.taskSummary()</code> points to the taskSummary action in the application controller
-            </p>
-        </div>
-    
-        <div>
-            <h2>Reactive Data Streaming</h2>
-            <p>
-                <a href="#code/streams/AvailableStreams.scala" class="shortcut">Streams of <code>Top</code> linux command data</a>
-                <code>
-                    def iterator = s"top -c -u ${System.getProperty("user.name")} -b".lines_!.iterator
-                </code>
-                Iterator is got from the process by executing it using <code>sys.process._</code>scala api
-                and then 
-                <code>
-                    def statsMemSorted: Enumerator[String] = Enumerator.enumerate(iterator)
-                </code>
-                Enumerator is produced from the iterator
-                <code>
-                    def taskSummary: Enumerator[JsValue] = statsMemSorted &> Enumeratee.mapInput[String] {
-                        case Input.El(line) if line contains "Tasks" => {
-                            val pieces = line.split("\\s+")
-                            implicit def toInt(str: String) = str.toInt
-                            Input.El(Json.toJson(TaskSummary(pieces(1), pieces(3), pieces(5), pieces(7), pieces(9))))
-                        }
-                    case Input.EOF => Input.EOF
-                    case other => Input.Empty
-                    }
-                </code>
-                Now the data is extracted from the line and then wrapped into an case class and sent out as json
-            </p>
-        </div>
+       
     </body>
 </html>
