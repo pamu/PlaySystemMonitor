@@ -13,7 +13,7 @@ import play.api.libs.functional.syntax._
 object AvailableStreams {
   import sys.process._
 
-  def iteratorMemSorted = s"top -c -u ${System.getProperty("user.name")} -b -o %MEM".lines_!.iterator
+  def iteratorMemSorted = s"top -c -u ${System.getProperty("user.name")} -b".lines_!.iterator
 
   def statsMemSorted: Enumerator[String] = Enumerator.enumerate(iteratorMemSorted)
 
