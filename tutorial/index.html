@@ -43,32 +43,53 @@
                 </div>
                 <div>
                     <h2>Enumerator as Producer</h2>
+                    <a href="#code/app/streams/AvailableStreams.scala" class="shortcut">AvailableStreams.scala</a>
                     <p>
-                        
+                        Iterator obtained from executing the process can be passed to <code>Enumerator.enumerate(iterator)</code> method to get the  Enumerator[String]. Once we get the Enumerator we are good to go and get the required lines containing the CPU and MEM data.
                     </p>
                 </div>
 
                 <div>
                     <h2>Enumeratee for Transforming the Stream</h2>
+                    <a href="#code/app/streams/AvailableStreams.scala" class="shortcut">AvailableStreams.
                     <p>
+                    	Enumerator thus obtained can be adapted using the Enumeratee
+                    	<ul>
+                    		<li>1) Check if line contains required key word</li>
+                    		<li>2) Extract the data if key work exists</li>
+                    		<li>3) else return Input.Empty</li>
+                    	</ul>
                     </p>
                 </div>
                 <div>
                     <h2>Writing consumption end point</h2>
+                    <a href="#code/app/controllers/Application.scala">Application Controller</a>
                     <p>
-
+                    	From the Final <code> Enumerator[JsValue]</code> we now can turn this into event source using the following code snippet
+                    	<code>Ok.chunked(enumerator &> EventSource()).as(EVENT_STREAM)</code>
                     </p>
                 </div>
                 <div>
                     <h2>Event Source Javascript</h2>
+                    <a href="#code/views/index.scala.html">Client Side</a>
                     <p>
-                        
+                        Now instantiate the EventSource() object passing the endpoint and in the callback function data is received in a push manner.
+                        <code>
+                        	var source = new EventSource("@routes.Application.mem()");
+					         source.addEventListener('message', function(e) {
+					            //e.data is the data in the form of json from the action @routes.Application.mem()
+					         });
+					         The above obtained can be used to update the UI element.
+                        </code>
                     </p>
                 </div>
                 <div>
                     <h2>Chart js</h2>
+                    <a href="#code/views/index.scala.html">Client Side</a>
                     <p>
-
+                    	Chart.js helps to draw nice charts like pie, doughnut, Bar, line etc
+                    	calling the update function on the chart would change the UI with an animation
+                    	and transitions look cool.
                     </p>
                 </div>
             </p>
