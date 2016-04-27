@@ -1,7 +1,7 @@
 # PlaySystemMonitor
 Web based System Montoring tool for linux writtern using Play web framework Scala
 
-Note: This project depends on top command of the system (This project is writter for Linux TOP command). Looks like Unix top command output structure is different from Linux top command output structure. So, the application breaks on UNIX system(mac). This app is tested on Linux Unbuntu.
+Note: This project depends on top command of the system (This project is writter for Linux TOP command). Looks like Unix top command output structure is different from Linux top command output structure. So, the application breaks on UNIX system(mac). This app is tested on Linux Ubuntu.
 
 =========================================================================================================================
 
